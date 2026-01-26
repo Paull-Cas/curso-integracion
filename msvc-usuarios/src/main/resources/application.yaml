@@ -1,0 +1,21 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: msvc-usuarios
+  datasource:
+    url: jdbc:mysql://localhost:3306/msvc_usuarios?createDatabaseIfNotExist=true
+    username: root
+    password: sistemaEIGR
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
