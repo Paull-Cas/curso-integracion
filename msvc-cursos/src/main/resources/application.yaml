@@ -1,12 +1,13 @@
 server:
   port: 8002
+
 spring:
   application:
     name: msvc-cursos
   datasource:
-    url: jdbc:postgresql://localhost:5432/msvc_cursos?createDatabaseIfNotExist=true
-    username: postgres
-    password: pg123
+    url: ${CURSOS_DB_URL:jdbc:postgresql://localhost:5432/msvc_cursos}
+    username: ${CURSOS_DB_USER}
+    password: ${CURSOS_DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
